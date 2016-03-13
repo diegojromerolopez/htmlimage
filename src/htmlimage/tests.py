@@ -4,6 +4,7 @@ import os
 import embedder
 import compressed_embedder
 import block_embedder
+#import dynamic_block_embedder
 import sys
 
 if __name__ == "__main__":
@@ -32,9 +33,14 @@ if __name__ == "__main__":
     output_file_path = samples_dir_path+"/sample{0}_avg.html".format(sample_index)
     image.save_to_html(output_file_path)
 
-    # Basic compressed image
+    # Block compressed image
     image = block_embedder.HtmlBlockEmbedder(sample_name, sample_file_path, block_size=2)
     output_file_path = samples_dir_path+"/sample{0}_block.html".format(sample_index)
     image.save_to_html(output_file_path)
+
+    # Block compressed image
+    #image = dynamic_block_embedder.HtmlDynamicBlockEmbedder(sample_name, sample_file_path, max_block_size=10)
+    #output_file_path = samples_dir_path+"/sample{0}_dynamic_block.html".format(sample_index)
+    #image.save_to_html(output_file_path)
 
     print(u"Image encoded successfully")

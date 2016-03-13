@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from PIL import Image
-import numpy
 from embedder import HtmlImageEmbedder
 from pixel import Pixel
 

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from PIL import Image
-import numpy
 from pixel import Pixel
 
 
